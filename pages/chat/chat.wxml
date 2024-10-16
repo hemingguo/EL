@@ -1,0 +1,34 @@
+<!--pages/chat/chat.wxml-->
+<!-- 顶部导航栏-->
+<t-navbar title="S & L">
+    <view slot="capsule" class="custom-capsule">
+        <t-icon size="25" bind:tap="onBack" aria-role="button" aria-label="返回" name="chevron-left" class="custom-capsule__icon" />
+        <t-icon size="25" bind:tap="onGoHome" aria-role="button" aria-label="首页" name="home" class="custom-capsule__icon" />
+    </view>
+</t-navbar>
+<!-- 顶部导航栏-->
+<view style="height: 1050rpx;" class="scroll">
+    <scroll-view scroll-y style="height: 850rpx;" class="scroll">
+        <view class="chat-history">
+            <block wx:for="{{chatHistory}}" wx:key="index">
+                <view class="message {{item.sender}}">
+                    {{item.content}}
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+</view>
+<view class="input-container">
+    <input class="user-input" bindinput="handleInput" value="{{userInput}}" placeholder="请输入消息"></input>
+    <button class="send-button" bindtap="sendMessage">发送</button>
+</view>
+
+<!-- 底部标签栏-->
+<view class="TabBar">
+    <t-tab-bar value="{{TabBarvalue}}" bindchange="TabBarChange" shape="round" theme="tag" split="{{false}}" fixed="{{false}}">
+        <t-tab-bar-item wx:for="{{list}}" wx:key="index" value="{{item.value}}" icon="{{item.icon}}" ariaLabel="{{item.ariaLabel}}">
+            {{item.label}}
+        </t-tab-bar-item>
+    </t-tab-bar>
+</view>
+<!-- 底部标签栏-->

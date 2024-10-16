@@ -1,0 +1,13 @@
+{
+    "component": true,
+    "usingComponents": {
+        "t-navbar": "tdesign-miniprogram/navbar/navbar",
+        "t-icon": "tdesign-miniprogram/icon/icon",
+        "t-back-top": "tdesign-miniprogram/back-top/back-top",
+        "t-fab": "tdesign-miniprogram/fab/fab",
+        "t-search": "tdesign-miniprogram/search/search",
+        "t-button": "tdesign-miniprogram/button/button"
+
+    },
+    "navigationBarBackgroundColor": "#9AFF9A"
+}

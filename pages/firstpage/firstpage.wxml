@@ -1,0 +1,27 @@
+<!--pages/firstpage/firstpage.wxml-->
+<!-- 顶部导航栏-->
+<t-navbar title="S & L">
+
+    <view slot="capsule" class="custom-capsule">
+        <t-icon size="25" bind:tap="onBack" aria-role="button" aria-label="返回" name="chevron-left" class="custom-capsule__icon" />
+
+        <t-icon size="25" bind:tap="onGoHome" aria-role="button" aria-label="首页" name="home" class="custom-capsule__icon" />
+    </view>
+</t-navbar>
+<!-- 顶部导航栏-->
+
+<!--搜索栏 -->
+<view class="search">
+    <t-search center placeholder="请输入书籍的ISBN码" shape="round" bindsubmit="input" />
+</view>
+<!--搜索栏 -->
+
+<!-- 底部标签栏-->
+<view class="TabBar">
+    <t-tab-bar value="{{TabBarvalue}}" bindchange="TabBarChange" shape="round" theme="tag" split="{{false}}" fixed="{{false}}">
+        <t-tab-bar-item wx:for="{{list}}" wx:key="index" value="{{item.value}}" icon="{{item.icon}}" ariaLabel="{{item.ariaLabel}}">
+            {{item.label}}
+        </t-tab-bar-item>
+    </t-tab-bar>
+</view>
+<!-- 底部标签栏-->

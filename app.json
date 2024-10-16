@@ -1,0 +1,43 @@
+{
+    "cloud": true,
+    "pages": [
+        "pages/firstpage/firstpage",
+        "pages/chat/chat",
+        "pages/nextpage1/nextpage1",
+        "pages/personpage/personpage",
+        "pages/nextpage2/nextpage2",
+        "pages/firstnext/firstnext"
+
+    ],
+
+    "usingComponents": {
+        "t-demo": "./components/demo-block/index",
+        "t-button": "tdesign-miniprogram/button/button",
+        "t-icon": "tdesign-miniprogram/icon/icon",
+        "t-input": "tdesign-miniprogram/input/input",
+        "t-back-top": "tdesign-miniprogram/back-top/back-top",
+        "t-search": "tdesign-miniprogram/search/search",
+        "t-fab": "tdesign-miniprogram/fab/fab",
+        "t-navbar": "tdesign-miniprogram/navbar/navbar",
+        "t-tab-bar": "tdesign-miniprogram/tab-bar/tab-bar",
+        "t-tab-bar-item": "tdesign-miniprogram/tab-bar-item/tab-bar-item",
+        "t-badge": "tdesign-miniprogram/badge/badge",
+        "t-pull-down-refresh": "tdesign-miniprogram/pull-down-refresh/pull-down-refresh",
+        "t-collapse": "tdesign-miniprogram/collapse/collapse",
+        "t-collapse-panel": "tdesign-miniprogram/collapse-panel/collapse-panel",
+        "t-tag": "tdesign-miniprogram/tag/tag",
+        "t-check-tag": "tdesign-miniprogram/check-tag/check-tag",
+        "t-avatar": "tdesign-miniprogram/avatar/avatar",
+        "t-avatar-group": "tdesign-miniprogram/avatar-group/avatar-group"
+    },
+    "window": {
+        "navigationBarBackgroundColor": "#00CD66",
+        "navigationBarTitleText": "S & L",
+        "navigationStyle": "custom",
+        "backgroundTextStyle": "dark",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#9AFF9A",
+        "enablePullDownRefresh": false
+    },
+    "sitemapLocation": "sitemap.json"
+}

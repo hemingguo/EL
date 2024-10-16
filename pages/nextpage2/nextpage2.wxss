@@ -1,0 +1,161 @@
+/* pages/nextpage2/nextpage2.wxss */
+/*顶部导航栏*/
+.custom-capsule {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-capsule__icon {
+    flex: 1;
+    position: relative;
+}
+
+.custom-capsule__icon+.custom-capsule__icon:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 36rpx;
+    background: #ffffff;
+}
+
+/*顶部导航栏*/
+
+
+/*底部标签栏*/
+.TabBar {
+    position: fixed;
+    width: 751rpx;
+    height: 112rpx;
+    bottom: 30rpx;
+}
+
+
+
+/*底部标签栏*/
+
+/*内容*/
+.container {
+    height: calc(100vh - 112rpx);
+    padding: 20rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.addsuccess {
+    height: calc(100vh - 112rpx);
+    padding: 20rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-cover {
+    width: 300rpx;
+    height: 420rpx;
+    margin-bottom: 20rpx;
+}
+
+.book-details {
+    text-align: center;
+    margin-bottom: 20rpx;
+}
+
+.book-title {
+    font-size: 26rpx;
+    font-weight: bold;
+    margin-bottom: 10rpx;
+}
+
+.book-author-publisher {
+    font-size: 20rpx;
+    margin-bottom: 10rpx;
+}
+
+.book-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rpx;
+}
+
+.book-pages {
+    font-size: 18rpx;
+}
+
+.book-pubdate {
+    font-size: 18rpx;
+}
+
+.book-binding {
+    font-size: 18rpx;
+}
+
+.book-summary {
+    text-align: justify;
+    padding: 20rpx;
+    background-color: #F0F0F0;
+}
+
+.summary-title {
+    font-size: 25rpx;
+    font-weight: bold;
+    margin-bottom: 10rpx;
+}
+
+
+
+.summary-content {
+    font-size: 20rpx;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0 24rpx;
+    /* 调整左右间距，保持两边留有空白 */
+}
+
+
+
+.button-example {
+    width: 80rpx;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/*内容*/
+/*未找到内容*/
+.not-found-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.not-found-content {
+    background-color: #daebe8;
+    border-radius: 8rpx;
+    padding: 20rpx;
+    display: flex;
+    align-items: center;
+}
+
+.not-found-icon {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+}
+
+.not-found-text {
+    font-size: 28rpx;
+    color: #333333;
+    text-shadow: 2rpx 2rpx 4rpx rgba(0, 0, 0, 0.2);
+}
+
+/*未找到内容*/

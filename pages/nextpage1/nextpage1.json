@@ -1,0 +1,12 @@
+{
+    "component": true,
+    "usingComponents": {
+        "t-grid": "tdesign-miniprogram/grid/grid",
+        "t-grid-item": "tdesign-miniprogram/grid-item/grid-item",
+        "t-button": "tdesign-miniprogram/button/button",
+        "t-input": "tdesign-miniprogram/input/input",
+        "t-dialog": "tdesign-miniprogram/dialog/dialog",
+        "t-collapse": "tdesign-miniprogram/collapse/collapse",
+        "t-collapse-panel": "tdesign-miniprogram/collapse-panel/collapse-panel"
+    }
+}

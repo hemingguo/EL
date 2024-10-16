@@ -1,0 +1,55 @@
+<!--pages/nextpage2/nextpage2.wxml-->
+<!-- 顶部导航栏-->
+<t-navbar title="S & L">
+    <view slot="capsule" class="custom-capsule">
+        <t-icon size="25" bind:tap="onBack" aria-role="button" aria-label="返回" name="chevron-left" class="custom-capsule__icon" />
+        <t-icon size="25" bind:tap="onGoHome" aria-role="button" aria-label="首页" name="home" class="custom-capsule__icon" />
+    </view>
+</t-navbar>
+<!-- 顶部导航栏-->
+
+
+<!-- 未找到内容-->
+<view class="container" wx:if="{{!bookInfo[0].title}}">
+    <view class="not-found-container">
+        <view class="not-found-content">
+            <image class="not-found-icon" icon="search"></image>
+            <view class="not-found-text">抱歉，未找到该图书！</view>
+        </view>
+    </view>
+</view>
+<!-- 未找到内容-->
+
+
+
+
+<!-- 内容-->
+<view class="container" wx:if="{{bookInfo[0].title}}" hidden="{{container_hide}}">
+    <image class="book-cover" src="{{bookInfo[0].images_large}}" mode="aspectFit"></image>
+    <view class="book-details">
+        <view class="book-title">{{bookInfo[0].title}}</view>
+        <view class="book-author-publisher" wx:if="{{bookInfo[0].author}}">{{bookInfo[0].author}} / {{bookInfo[0].publisher}}</view>
+        <view class="book-info">
+            <view class="book-pages" wx:if="{{bookInfo[0].pages != 0}}">页数：{{bookInfo[0].pages}} 页</view>
+            <view class="book-pubdate" wx:if="{{bookInfo[0].pubdate}}">日期：{{bookInfo[0].pubdate}}</view>
+            <view class="book-binding" wx:if="{{bookInfo[0].binding}}">装订：{{bookInfo[0].binding}}</view>
+        </view>
+    </view>
+    <view class="book-summary">
+        <view class="summary-title">图书简介</view>
+        <view class="summary-content">{{bookInfo[0].summary}}</view>
+        <view class="summary-content" wx:if="{{!bookInfo[0].summary}}">暂无</view>
+    </view>
+</view>
+<!-- 内容-->
+
+
+<!-- 底部标签栏-->
+<view class="TabBar">
+    <t-tab-bar value="{{TabBarvalue}}" bindchange="TabBarChange" shape="round" theme="tag" split="{{false}}" fixed="{{false}}">
+        <t-tab-bar-item wx:for="{{list}}" wx:key="index" value="{{item.value}}" icon="{{item.icon}}" ariaLabel="{{item.ariaLabel}}">
+            {{item.label}}
+        </t-tab-bar-item>
+    </t-tab-bar>
+</view>
+<!-- 底部标签栏-->

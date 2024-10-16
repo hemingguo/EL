@@ -1,0 +1,62 @@
+/* pages/personpage/personpage.wxss */
+/*顶部导航栏*/
+.custom-capsule {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-capsule__icon {
+    flex: 1;
+    position: relative;
+}
+
+.custom-capsule__icon+.custom-capsule__icon:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 36rpx;
+    background: #ffffff;
+}
+
+/*顶部导航栏*/
+.TabBar {
+    position: absolute;
+    width: 751rpx;
+    height: 112rpx;
+    bottom: 30rpx;
+}
+
+/*底部标签栏*/
+.avatar-wrapper {
+    color: #f1caca;
+    background-color: #f1caca;
+}
+
+.avatar {
+    margin-right: 0rpx;
+    margin-top: 20rpx;
+}
+
+.input {
+    margin-top: 20rpx;
+}
+
+.button {
+    position: relative;
+    height: 96rpx;
+    width: 144rpx;
+    top: 25rpx;
+    left: 303rpx;
+}
+
+.ID {
+    margin-top: 20rpx;
+    text-align: center
+}
+

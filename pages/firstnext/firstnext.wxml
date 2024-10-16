@@ -1,0 +1,74 @@
+<!-- pages/firstnext/firstnext.wxml -->
+<!-- pages/firstnext/firstnext.wxml -->
+<!-- 顶部导航栏 -->
+<t-navbar title="S & L">
+    <view slot="capsule" class="custom-capsule">
+        <t-icon size="25" bind:tap="onBack" aria-role="button" aria-label="返回" name="chevron-left" class="custom-capsule__icon" />
+        <t-icon size="25" bind:tap="onGoHome" aria-role="button" aria-label="首页" name="home" class="custom-capsule__icon" />
+    </view>
+</t-navbar>
+<!-- 顶部导航栏 -->
+<!-- 未找到内容 -->
+<view class="container" wx:if="{{!bookInfo.title}}">
+    <view class="not-found-container">
+        <view class="not-found-content">
+            <image class="not-found-icon" icon="search"></image>
+            <view class="not-found-text">抱歉，未找到该图书！</view>
+        </view>
+    </view>
+</view>
+<!-- 未找到内容 -->
+<!-- 添加成功 -->
+<view class="addsuccess" hidden="{{add_success}}">
+    <view class="not-found-container">
+        <view class="not-found-content">
+            <image class="not-found-icon" icon="search"></image>
+            <view class="not-found-text">添加成功</view>
+        </view>
+    </view>
+</view>
+<!-- 添加成功 -->
+<!-- 已存在 -->
+<view class="addsuccess" hidden="{{add_fail}}">
+    <view class="not-found-container">
+        <view class="not-found-content">
+            <image class="not-found-icon" icon="search"></image>
+            <view class="not-found-text">该书已存在！！！</view>
+        </view>
+    </view>
+</view>
+<!-- 已存在 -->
+<!-- 内容 -->
+
+<view class="container" wx:if="{{bookInfo.title}}" hidden="{{container_hide}}">
+    <image class="book-cover" src="{{bookInfo.images_large}}" mode="aspectFit"></image>
+    <view class="book-details">
+        <view class="book-title">{{bookInfo.title}}</view>
+        <view class="book-author-publisher" wx:if="{{bookInfo.author}}">
+            {{bookInfo.author}} / {{bookInfo.publisher}}
+        </view>
+        <view class="book-info">
+            <view class="book-pages" wx:if="{{bookInfo.pages != 0}}">页数：{{bookInfo.pages}} 页</view>
+            <view class="book-pubdate" wx:if="{{bookInfo.pubdate}}">日期：{{bookInfo.pubdate}}</view>
+            <view class="book-binding" wx:if="{{bookInfo.binding}}">装订：{{bookInfo.binding}}</view>
+
+        </view>
+    </view>
+    <view class="book-summary">
+        <view class="summary-title">图书简介</view>
+        <view class="summary-content">{{bookInfo.summary}}</view>
+        <view class="summary-content" wx:if="{{!bookInfo.summary}}">暂无</view>
+    </view>
+    <t-button class="button-example" bindtap="add" shape="round" theme="danger" icon="arrow-up"></t-button>
+</view>
+
+<!-- 内容 -->
+<!-- 底部标签栏 -->
+<view class="TabBar">
+    <t-tab-bar value="{{TabBarvalue}}" bindchange="TabBarChange" shape="round" theme="tag" split="{{false}}" fixed="{{false}}">
+        <t-tab-bar-item wx:for="{{list}}" wx:key="index" value="{{item.value}}" icon="{{item.icon}}" ariaLabel="{{item.ariaLabel}}">
+            {{item.label}}
+        </t-tab-bar-item>
+    </t-tab-bar>
+</view>
+<!-- 底部标签栏 -->

@@ -1,0 +1,48 @@
+/* pages/firstpage/firstpage.wxss */
+/*顶部导航栏*/
+.custom-capsule {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-capsule__icon {
+    flex: 1;
+    position: relative;
+}
+
+.custom-capsule__icon+.custom-capsule__icon:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 36rpx;
+    background: #ffffff;
+}
+
+/*顶部导航栏*/
+
+/*搜索框*/
+.search {
+    margin-bottom: 32rpx;
+    align-items: center;
+    position: absolute;
+    width: 550.66rpx;
+    height: 80rpx;
+    right: 100rpx;
+    top: 407rpx;
+}
+
+/*搜索框*/
+/*底部标签栏*/
+.TabBar {
+    position: absolute;
+    width: 751rpx;
+    height: 112rpx;
+    bottom: 30rpx;
+}
+/*底部标签栏*/

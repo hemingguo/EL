@@ -1,0 +1,233 @@
+/* pages/nextpage1/nextpage1.wxss */
+/*顶部导航栏*/
+.custom-capsule {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-capsule__icon {
+    flex: 1;
+    position: relative;
+}
+
+.custom-capsule__icon+.custom-capsule__icon:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 36rpx;
+    background: #ffffff;
+}
+
+/*顶部导航栏*/
+/* 删除确认对话框 */
+.delete-dialog-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.delete-dialog-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-dialog-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.delete-dialog-content {
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.delete-dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete-dialog-btn-confirm {
+    width: 100px;
+    height: 40px;
+    background-color: rgba(255, 0, 0, 0.8);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.delete-dialog-btn {
+    width: 100px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+/* 删除确认对话框 */
+.TabBar {
+    position: absolute;
+    width: 751rpx;
+    height: 112rpx;
+    bottom: 30rpx;
+}
+
+/*底部标签栏*/
+
+
+
+
+
+
+
+.three-button {
+    position: absolute;
+    top: 175rpx;
+}
+
+/*搜索*/
+.search {
+    margin-left: 32rpx;
+}
+
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dialog-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.dialog-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.dialog-btns {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.dialog-btn-confirm {
+    background-color: rgba(51, 137, 158, 1);
+    margin-right: 0;
+}
+
+.dialog-btn {
+    width: 100px;
+    height: 40px;
+    background-color: rgba(51, 137, 158, 0.678);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+/*搜索*/
+
+/*刷新*/
+.refresh {
+    left: 500rpx;
+    z-index: -1;
+}
+
+/*刷新*/
+
+.scroll {
+    position: absolute;
+    top: 300rpx;
+    z-index: -1;
+}
+
+.thumbnail {
+    width: 150rpx;
+    height: 200rpx;
+}
+
+.book-info {
+    margin-left: 20rpx;
+}
+
+.book-title {
+    font-size: 28rpx;
+    font-weight: bold;
+}
+
+.book-info-item {
+    margin-top: 10rpx;
+}
+
+.book-description {
+    margin-top: 20rpx;
+}
+
+.delete {
+    margin-left: 250px;
+    margin-top: -100rpx;
+}
+
+.thoughts {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 40rpx;
+    box-sizing: border-box;
+}
+
+.save-button {
+    margin-left: 10px;
+    margin-top: 50rpx;
+}

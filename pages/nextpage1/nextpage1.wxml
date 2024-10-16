@@ -1,0 +1,92 @@
+<!--pages/nextpage1/nextpage1.wxml-->
+
+<!-- 顶部导航栏-->
+<t-navbar title="S & L">
+    <view slot="capsule" class="custom-capsule">
+        <t-icon size="25" bind:tap="onBack" aria-role="button" aria-label="返回" name="chevron-left" class="custom-capsule__icon" />
+        <t-icon size="25" bind:tap="onGoHome" aria-role="button" aria-label="首页" name="home" class="custom-capsule__icon" />
+    </view>
+</t-navbar>
+<!-- 顶部导航栏-->
+
+<!-- 上方三图标-->
+<view class="three-button">
+    <!--搜索 - 窗口 -->
+    <t-button theme="primary" icon="search" shape="circle" size="large" class="search" bindtap="toggleDialog" aria-label="搜索"></t-button>
+
+    <!-- 弹窗 -->
+    <view class="dialog" hidden="{{!showDialog}}">
+        <view class="dialog-mask"></view>
+        <view class="dialog-content">
+            <input class="dialog-input" type="text" placeholder="请输入" bindinput="bindInput" value="{{inputValue}}" />
+            <view class="dialog-btns">
+                <button class="dialog-btn" bindtap="cancelDialog">取消</button>
+                <button class="dialog-btn dialog-btn-confirm" bindtap="confirmDialog">确定</button>
+            </view>
+        </view>
+    </view>
+    <!-- 弹窗 -->
+    <!-- 搜索 - 窗口-->
+
+
+    <t-button theme="primary" icon="refresh" bindtap="shuaxin" shape="circle" size="large" class="refresh" aria-label="刷新"></t-button>
+</view>
+<!-- 上方三图标-->
+
+<!-- 折叠面板-->
+<scroll-view scroll-y style="height: 1050rpx;" class="scroll">
+    <t-collapse theme="card" defaultValue="{{collapseValue}}" expandMutex expandIcon>
+
+
+        <block wx:for="{{book}}" wx:key="index">
+            <t-collapse-panel header="{{book[index].title}}" value="{{index}}">
+                <view class="panel-content">
+                    <image class="thumbnail" src="{{book[index].images_medium}}"></image>
+
+
+                    <view class="book-info">
+                        <view class="book-info-item">作者：{{book[index].author}}</view>
+                        <view class="book-info-item">出版社：{{book[index].publisher}}</view>
+                        <view class="book-info-item">出版日期：{{book[index].pubdate}}</view>
+                        <view class="book-info-item">简介：
+                            <view wx:if="{{book[index].summary}}">{{book[index].summary}}</view>
+                            <view wx:else>暂无</view>
+                        </view>
+                    </view>
+
+
+
+                    <textarea class="thoughts" placeholder="记录读书感想" value="{{book[index].thoughts}}" bindinput="onThoughtsInput" data-index="{{index}}"></textarea>
+                    <t-button class="save-button" icon="check" shape="circle" size="large" theme="primary" bindtap="saveThoughts" data-index="{{index}}"></t-button>
+
+                    <t-button theme="danger" icon="delete" bindtap="showDeleteConfirm" data-index="{{index}}" shape="circle" size="large" class="delete" aria-label="删除"></t-button>
+
+                </view>
+            </t-collapse-panel>
+        </block>
+
+
+    </t-collapse>
+</scroll-view>
+<!-- 折叠面板-->
+<!-- 删除确认对话框 -->
+<view class="delete-dialog-container" wx:if="{{showDeleteConfirm}}">
+    <view class="delete-dialog-mask"></view>
+    <view class="delete-dialog-box">
+        <view class="delete-dialog-content">您确定要删除该书籍吗？</view>
+        <view class="delete-dialog-buttons">
+            <button class="delete-dialog-btn-confirm" bindtap="confirmDelete">确认</button>
+            <button bindtap="cancelDelete" class="delete-dialog-btn">取消</button>
+        </view>
+    </view>
+</view>
+<!-- 删除确认对话框 -->
+<!-- 底部标签栏-->
+<view class="TabBar">
+    <t-tab-bar value="{{TabBarvalue}}" bindchange="TabBarChange" shape="round" theme="tag" split="{{false}}" fixed="{{false}}">
+        <t-tab-bar-item wx:for="{{list}}" wx:key="index" value="{{item.value}}" icon="{{item.icon}}" ariaLabel="{{item.ariaLabel}}">
+            {{item.label}}
+        </t-tab-bar-item>
+    </t-tab-bar>
+</view>
+<!-- 底部标签栏-->
